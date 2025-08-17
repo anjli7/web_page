@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-    // Application type selection handler
+     // Application type selection handler
     appTypeSelect.addEventListener('change', function() {
         const appType = this.value;
         selectedAmount = servicePrices[appType] || 0;
