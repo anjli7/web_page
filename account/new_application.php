@@ -201,7 +201,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proceed_payment'])) {
             'user_id' => $_SESSION['user_id'],
             'application_type' => $_POST['application_type'],
             'amount' => $servicePrices[$_POST['application_type']],
-            'application_number' => $newApplicationNumber
+            'application_number' => $newApplicationNumber // 000008
         ];
 
         $logger->info("Application data stored in session: " . json_encode($_SESSION['temp_application']));
@@ -328,8 +328,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proceed_payment'])) {
             <?php include 'sidebar.php'; ?>
         </div>
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div
-                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Application Form</h1>
             </div>
 

@@ -18,18 +18,18 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </a>
         </li>
         <li>
-            <a href="/web_page/account/profile.php" class="nav-link <?php echo ($current_page === 'profile.php') ? 'active' : 'link-dark'; ?>">
-                <i class="fas fa-user me-2"></i> My Profile
-            </a>
-        </li>
-        <li>
             <a href="/web_page/account/my_application.php" class="nav-link <?php echo ($current_page === 'my_application.php') ? 'active' : 'link-dark'; ?>">
                 <i class="fas fa-file-alt me-2"></i> My Application
             </a>
         </li>
         <li>
-            <a href="/web_page/account/new_form.php" class="nav-link <?php echo ($current_page === 'new_application.php') ? 'active' : 'link-dark'; ?>">
-                <i class="fas fa-file-alt me-2"></i> New Application
+            <a href="/web_page/account/new_application.php" class="nav-link <?php echo ($current_page === 'new_application.php') ? 'active' : 'link-dark'; ?>">
+                <i class="fa-solid fa-clipboard-check"></i> New Application
+            </a>
+        </li>
+        <li>
+            <a href="/web_page/account/profile.php" class="nav-link <?php echo ($current_page === 'profile.php') ? 'active' : 'link-dark'; ?>">
+                <i class="fas fa-user me-2"></i> My Profile
             </a>
         </li>
         <li>

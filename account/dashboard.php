@@ -1,7 +1,5 @@
 <?php 
 include '../include/header.php';
-require_once '../php/db.php';
-require_once '../php/config.php';
 global $logger, $browserLogger;
 
 // Add dashboard CSS

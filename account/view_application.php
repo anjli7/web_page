@@ -1,7 +1,5 @@
 <?php
 include '../include/header.php';
-require_once '../php/db.php';
-require_once '../php/config.php';
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: ../auth/login_register.php');
@@ -67,6 +65,27 @@ switch ($application['status']) {
     case 'missing_document': $statusClass = 'bg-info'; break;
     case 'rejected': $statusClass = 'bg-danger'; break;
 }
+
+$sql = "SELECT f.file_name, f.original_name, f.file_path, a.service_type, a.id AS application_id
+        FROM files f
+        INNER JOIN applications a ON f.model_id = a.id
+        WHERE a.user_id = ? 
+        AND f.model_type = 'certificate'";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $userId);
+$stmt->execute();
+$result = $stmt->get_result();
+
+// $cert_sql = "SELECT f.id, f.original_name, a.service_type 
+//              FROM files f
+//              INNER JOIN applications a ON f.model_id = a.id
+//              WHERE f.model_type = 'certificate' AND a.id = ? AND a.user_id = ?";
+// $cert_stmt = $conn->prepare($cert_sql);
+// $cert_stmt->bind_param("ii", $applicationId, $userId);
+// $cert_stmt->execute();
+// $cert_result = $cert_stmt->get_result();
+
+
 ?>
 
 <div class="container py-4">
@@ -130,7 +149,7 @@ switch ($application['status']) {
                                     <td><?php echo htmlspecialchars($doc['original_name']); ?></td>
                                     <td><?php echo date('M j, Y', strtotime($doc['uploaded_at'])); ?></td>
                                     <td>
-                                        <!-- <?php $baseURL . $doc['file_path']; ?> -->
+                                        <?php $baseURL . $doc['file_path']; ?>
                                         <a href="../uploads/<?php echo htmlspecialchars($doc['file_path']); ?>" target="_blank" class="btn btn-sm btn-outline-primary">
                                             <i class="fas fa-eye me-1"></i> View
                                         </a>
@@ -147,155 +166,22 @@ switch ($application['status']) {
         </div>
     </div>
 
-    <!-- Required Documents from Admin -->
-    <?php if (!empty($requiredDocs)): ?>
-<div class="card mb-4">
-    <div class="card-header">
-        <h5 class="mb-0 text-white">Required Documents (as marked by Admin)</h5>
+    <?php while ($row = $result->fetch_assoc()): ?>
+    <div class="certificate-card mb-3 p-3 border rounded shadow-sm">
+        <p><strong>Application Type:</strong> <?= htmlspecialchars($row['service_type']); ?></p>
+        <p><strong>Certificate:</strong> <?= htmlspecialchars($row['original_name']); ?></p>
+        <a href="../uploads/certificate/<?= htmlspecialchars($row['file_name']); ?>" 
+           class="btn btn-sm btn-success" download>
+           <i class="fas fa-download me-1"></i> Download Certificate
+        </a>
+       
+        <a href="../uploads/certificate/<?= htmlspecialchars($row['file_name']); ?>" 
+           class="btn btn-sm btn-primary" target="_blank">
+           <i class="fas fa-eye me-1"></i> View
+        </a>
     </div>
-    <div class="card-body">
-        <p>Please upload the following documents before proceeding the application: <strong><?php echo implode(', ', $requiredDocs); ?></strong></p>
-        <form action="upload_document.php" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="application_id" value="<?= $application['id'] ?>">
-                <div class="mb-3">
-            <label for="documentFile" class="form-label">Select file to upload</label>
-            <input class="form-control" type="file" id="documentFile" name="document_file[]" multiple required>
-            <div class="form-text">
-                <p id="documentNameText" class="mb-1"></p>
-                Accepted file types: PDF, JPG, PNG (Max: 5MB)
-            </div>
-        </div>
+<?php endwhile; ?>
 
-                    <button type="submit" onSubmit="handleSubmit()" class="btn btn-primary">Upload</button>
-
-            </form>
-    </div>
-</div>
-<?php endif; ?>
-    </div>
-
-<script>
-function handleSubmit() {
-    console.log("submit");
-    // log the files here
-    console.log(document.getElementById("documentFile").files);
-}
-</script>
-
-<!-- <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var uploadModal = document.getElementById('uploadDocumentModal');
-    var uploadForm = uploadModal.querySelector('form');
-    var uploadButton = uploadForm.querySelector('button[type="submit"]');
-    var originalUploadButtonText = uploadButton.innerHTML;
-    
-    // Handle modal show event
-    uploadModal.addEventListener('show.bs.modal', function (event) {
-        var button = event.relatedTarget;
-        var docName = button.getAttribute('data-doc-name');
-        
-        var modalTitle = uploadModal.querySelector('.modal-title');
-        var docNameInput = document.getElementById('documentNameInput');
-        var docNameText = document.getElementById('documentNameText');
-        
-        modalTitle.textContent = 'Upload ' + docName;
-        docNameInput.value = docName;
-        docNameText.textContent = 'Document: ' + docName;
-        
-        // Reset form
-        uploadForm.reset();
-        
-        // Remove any previous error/success messages
-        var existingAlerts = uploadModal.querySelectorAll('.alert');
-        existingAlerts.forEach(function(alert) {
-            alert.remove();
-        });
-        
-        // Reset button state
-        uploadButton.disabled = false;
-        uploadButton.innerHTML = originalUploadButtonText;
-    });
-    
-    // Handle form submission
-    uploadForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        var formData = new FormData(uploadForm);
-        var fileInput = uploadForm.querySelector('input[type="file"]');
-        
-        // Validate file
-        if (fileInput.files.length === 0) {
-            showAlert('Please select a file to upload', 'danger');
-            return;
-        }
-        
-        // Show loading state
-        uploadButton.disabled = true;
-        uploadButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Uploading...';
-        
-        // Submit form via AJAX
-        fetch('upload_document.php', {
-            method: 'POST',
-            body: formData,
-            credentials: 'same-origin'
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // Show success message
-                showAlert('Document uploaded successfully!', 'success');
-                
-                // Close modal after 1.5 seconds
-                setTimeout(function() {
-                    var modal = bootstrap.Modal.getInstance(uploadModal);
-                    modal.hide();
-                    
-                    // Reload the page to show updated document list
-                    window.location.reload();
-                }, 1500);
-            } else {
-                // Show error message
-                showAlert(data.message || 'Failed to upload document', 'danger');
-                uploadButton.disabled = false;
-                uploadButton.innerHTML = originalUploadButtonText;
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            showAlert('An error occurred while uploading the document', 'danger');
-            uploadButton.disabled = false;
-            uploadButton.innerHTML = originalUploadButtonText;
-        });
-    });
-    
-    // Helper function to show alert messages
-    function showAlert(message, type) {
-        // Remove any existing alerts
-        var existingAlerts = uploadModal.querySelectorAll('.alert');
-        existingAlerts.forEach(function(alert) {
-            alert.remove();
-        });
-        
-        // Create new alert
-        var alertDiv = document.createElement('div');
-        alertDiv.className = `alert alert-${type} alert-dismissible fade show mt-3`;
-        alertDiv.role = 'alert';
-        alertDiv.innerHTML = `
-            ${message}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        `;
-        
-        // Insert alert after the form
-        uploadForm.parentNode.insertBefore(alertDiv, uploadForm.nextSibling);
-        
-        // Auto-dismiss after 5 seconds
-        setTimeout(() => {
-            var bsAlert = new bootstrap.Alert(alertDiv);
-            bsAlert.close();
-        }, 5000);
-    }
-});
-</script> -->
 
 </div>
 

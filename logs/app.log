@@ -1,0 +1,281 @@
+[2025-08-27 13:41:11] [INFO] [::1] Application initialized
+[2025-08-27 17:11:11] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-27 17:11:11] [INFO] [::1] this is application id: 
+[2025-08-27 17:11:11] [INFO] [::1] Application details fetched: 
+[2025-08-27 13:41:28] [INFO] [::1] Application initialized
+[2025-08-27 17:11:28] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-27 17:11:28] [INFO] [::1] this is application id: 
+[2025-08-27 17:11:28] [INFO] [::1] Application details fetched: 
+[2025-08-27 13:41:52] [INFO] [::1] Application initialized
+[2025-08-27 17:11:52] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-27 17:11:52] [INFO] [::1] this is application id: 
+[2025-08-27 17:11:52] [INFO] [::1] Application details fetched: 
+[2025-08-27 13:51:43] [INFO] [::1] Application initialized
+[2025-08-27 17:21:43] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-27 17:21:43] [INFO] [::1] this is application id: 
+[2025-08-27 17:21:43] [INFO] [::1] Application details fetched: 
+[2025-08-28 09:24:49] [INFO] [::1] Application initialized
+[2025-08-28 12:54:49] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 09:24:49] [INFO] [::1] Application initialized
+[2025-08-28 12:54:49] [INFO] [::1] Login register page accessed
+[2025-08-28 09:25:34] [INFO] [::1] Application initialized
+[2025-08-28 12:55:34] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 09:25:41] [INFO] [::1] Application initialized
+[2025-08-28 12:55:41] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 12:55:41] [INFO] [::1] Login page accessed
+[2025-08-28 09:25:48] [INFO] [::1] Application initialized
+[2025-08-28 12:55:48] [INFO] [::1] Login register page accessed
+[2025-08-28 12:55:48] [INFO] [::1] email "riya@gmail.com"
+[2025-08-28 12:55:48] [INFO] [::1] password "123456"
+[2025-08-28 12:55:48] [INFO] [::1] Executed query: SELECT * FROM users WHERE email = 'riya@gmail.com'
+[2025-08-28 12:55:48] [INFO] [::1] User Row: {"id":"39","name":"riya gupta","email":"riya@gmail.com","mobile":"07770958768","password":"$2y$10$cTd6aWbd2iZ9N8T85ruApeD.DEgKe\/5.FIDiIBKAIk\/gsoSG0oWjK","role":"user","status":"active","featured_image":"uploads\/profiles\/688772c98ccc6.jpg","reset_token":null,"reset_token_expires":null,"last_login":null,"created_at":"2025-07-27 17:32:18","updated_at":"2025-08-15 14:15:12","otp":null,"otp_expiry":null}
+[2025-08-28 12:55:49] [INFO] [::1] password verify success
+[2025-08-28 12:55:49] [INFO] [::1] This is session after login: {"user_id":"39","name":"riya gupta","email":"riya@gmail.com","mobile":"07770958768","featured_image":"uploads\/profiles\/688772c98ccc6.jpg","role":"user"}
+[2025-08-28 09:25:49] [INFO] [::1] Application initialized
+[2025-08-28 12:55:49] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 09:25:53] [INFO] [::1] Application initialized
+[2025-08-28 12:55:53] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 12:55:53] [INFO] [::1] Dashboard accessed
+[2025-08-28 12:55:53] [INFO] [::1] User ID: 39
+[2025-08-28 12:55:53] [INFO] [::1] Application statistics fetched: {"total_applications":1,"pending_applications":"1","approved_applications":"0","missing_document_applications":"0","rejected_applications":"0"}
+[2025-08-28 12:55:53] [INFO] [::1] Recent applications fetched: [{"id":49,"application_number":"000010","user_id":39,"service_type":"GST Registration","status":"pending","payment_status":"pending","reviewed_by":null,"reviewed_at":null,"created_at":"2025-08-27 16:56:39","updated_at":"2025-08-27 16:56:39","required_documents":null}]
+[2025-08-28 09:26:00] [INFO] [::1] Application initialized
+[2025-08-28 12:56:00] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 12:56:00] [INFO] [::1] this is application id: 
+[2025-08-28 12:56:00] [INFO] [::1] Application details fetched: 
+[2025-08-28 09:27:10] [INFO] [::1] Application initialized
+[2025-08-28 12:57:10] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 12:57:10] [INFO] [::1] Dashboard accessed
+[2025-08-28 12:57:10] [INFO] [::1] User ID: 39
+[2025-08-28 12:57:10] [INFO] [::1] Application statistics fetched: {"total_applications":1,"pending_applications":"1","approved_applications":"0","missing_document_applications":"0","rejected_applications":"0"}
+[2025-08-28 12:57:10] [INFO] [::1] Recent applications fetched: [{"id":49,"application_number":"000010","user_id":39,"service_type":"GST Registration","status":"pending","payment_status":"pending","reviewed_by":null,"reviewed_at":null,"created_at":"2025-08-27 16:56:39","updated_at":"2025-08-27 16:56:39","required_documents":null}]
+[2025-08-28 09:27:13] [INFO] [::1] Application initialized
+[2025-08-28 12:57:13] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 09:27:29] [INFO] [::1] Application initialized
+[2025-08-28 12:57:29] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 12:57:29] [INFO] [::1] this is application id: 
+[2025-08-28 12:57:29] [INFO] [::1] Application details fetched: 
+[2025-08-28 09:27:57] [INFO] [::1] Application initialized
+[2025-08-28 12:57:57] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 09:32:31] [INFO] [::1] Application initialized
+[2025-08-28 13:02:31] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 09:32:34] [INFO] [::1] Application initialized
+[2025-08-28 13:02:34] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 13:02:34] [INFO] [::1] this is application id: 
+[2025-08-28 13:02:34] [INFO] [::1] Application details fetched: 
+[2025-08-28 09:34:55] [INFO] [::1] Application initialized
+[2025-08-28 13:04:55] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 13:04:55] [INFO] [::1] this is application id: 
+[2025-08-28 13:04:55] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:32:10] [INFO] [::1] Application initialized
+[2025-08-28 14:02:10] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:02:10] [INFO] [::1] this is application id: 
+[2025-08-28 14:02:10] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:32:22] [INFO] [::1] Application initialized
+[2025-08-28 14:02:22] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:02:22] [INFO] [::1] this is application id: 
+[2025-08-28 14:02:22] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:33:12] [INFO] [::1] Application initialized
+[2025-08-28 14:03:12] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:03:12] [INFO] [::1] this is application id: 
+[2025-08-28 14:03:12] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:33:17] [INFO] [::1] Application initialized
+[2025-08-28 14:03:17] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:03:17] [INFO] [::1] this is application id: 
+[2025-08-28 14:03:17] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:34:03] [INFO] [::1] Application initialized
+[2025-08-28 14:04:03] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 10:34:05] [INFO] [::1] Application initialized
+[2025-08-28 14:04:05] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 10:34:06] [INFO] [::1] Application initialized
+[2025-08-28 14:04:06] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 10:34:26] [INFO] [::1] Application initialized
+[2025-08-28 14:04:26] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 10:34:28] [INFO] [::1] Application initialized
+[2025-08-28 14:04:28] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:04:28] [INFO] [::1] Dashboard accessed
+[2025-08-28 14:04:28] [INFO] [::1] User ID: 39
+[2025-08-28 14:04:28] [INFO] [::1] Application statistics fetched: {"total_applications":0,"pending_applications":null,"approved_applications":null,"missing_document_applications":null,"rejected_applications":null}
+[2025-08-28 14:04:28] [INFO] [::1] Recent applications fetched: []
+[2025-08-28 10:35:48] [INFO] [::1] Application initialized
+[2025-08-28 14:05:48] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:05:48] [INFO] [::1] Dashboard accessed
+[2025-08-28 14:05:48] [INFO] [::1] User ID: 39
+[2025-08-28 14:05:48] [INFO] [::1] Application statistics fetched: {"total_applications":0,"pending_applications":null,"approved_applications":null,"missing_document_applications":null,"rejected_applications":null}
+[2025-08-28 14:05:48] [INFO] [::1] Recent applications fetched: []
+[2025-08-28 10:36:00] [INFO] [::1] Application initialized
+[2025-08-28 14:06:00] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 10:36:02] [INFO] [::1] Application initialized
+[2025-08-28 14:06:02] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 10:39:13] [INFO] [::1] Application initialized
+[2025-08-28 14:09:13] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:09:13] [INFO] [::1] Application data stored in session: {"user_id":"39","application_type":"GST Registration","amount":1999,"application_number":"000010"}
+[2025-08-28 14:09:13] [INFO] [::1] Application created successfully: 50
+[2025-08-28 14:09:13] [INFO] [::1] Temporary upload directory created: ../uploads/applications
+[2025-08-28 14:09:13] [INFO] [::1] Required documents for application type: ["PAN Card","Aadhaar Card","Business Address Proof","Bank Account Details","Photograph"]
+[2025-08-28 14:09:13] [INFO] [::1] Document names from form: ["PAN Card","Aadhaar Card","Business Address Proof","Bank Account Details","Photograph"]
+[2025-08-28 14:09:13] [INFO] [::1] File titles from form: ["PAN Card","Aadhaar Card","Business Address Proof","Bank Account Details","Photograph"]
+[2025-08-28 14:09:13] [INFO] [::1] Uploaded files array: {"name":["Cast certificate.pdf","Result 12 th.pdf","Samgra ID.pdf","Photo  (1).jpeg","Photo  (2).jpeg"],"full_path":["Cast certificate.pdf","Result 12 th.pdf","Samgra ID.pdf","Photo  (1).jpeg","Photo  (2).jpeg"],"type":["application\/pdf","application\/pdf","application\/pdf","image\/jpeg","image\/jpeg"],"tmp_name":["C:\\xampp\\tmp\\phpFDC4.tmp","C:\\xampp\\tmp\\phpFDC5.tmp","C:\\xampp\\tmp\\phpFDD6.tmp","C:\\xampp\\tmp\\phpFDD7.tmp","C:\\xampp\\tmp\\phpFDD8.tmp"],"error":[0,0,0,0,0],"size":[686409,1322534,183962,169397,81335]}
+[2025-08-28 14:09:13] [INFO] [::1] Uploaded files array: {"name":["Cast certificate.pdf","Result 12 th.pdf","Samgra ID.pdf","Photo  (1).jpeg","Photo  (2).jpeg"],"full_path":["Cast certificate.pdf","Result 12 th.pdf","Samgra ID.pdf","Photo  (1).jpeg","Photo  (2).jpeg"],"type":["application\/pdf","application\/pdf","application\/pdf","image\/jpeg","image\/jpeg"],"tmp_name":["C:\\xampp\\tmp\\phpFDC4.tmp","C:\\xampp\\tmp\\phpFDC5.tmp","C:\\xampp\\tmp\\phpFDD6.tmp","C:\\xampp\\tmp\\phpFDD7.tmp","C:\\xampp\\tmp\\phpFDD8.tmp"],"error":[0,0,0,0,0],"size":[686409,1322534,183962,169397,81335]}
+[2025-08-28 14:09:13] [INFO] [::1] Processing file for document: PAN Card with title: PAN Card
+[2025-08-28 14:09:13] [INFO] [::1] File details: {"name":"Cast certificate.pdf","full_path":"Cast certificate.pdf","type":"application\/pdf","tmp_name":"C:\\xampp\\tmp\\phpFDC4.tmp","error":0,"size":686409}
+[2025-08-28 14:09:13] [INFO] [::1] Temporary upload directory: ../uploads/applications
+[2025-08-28 14:09:13] [INFO] [::1] Document name: PAN Card
+[2025-08-28 14:09:13] [INFO] [::1] File uploaded successfully: {"original_name":"Cast certificate.pdf","filename":"Cast certificate_1756370353.pdf","size":686409,"file_path":"..\/uploads\/applications\/Cast certificate_1756370353.pdf","file_type":"application\/pdf","file_title":"PAN Card"}
+[2025-08-28 14:09:13] [INFO] [::1] File details inserted into database with ID: 179
+[2025-08-28 14:09:13] [INFO] [::1] Uploaded file for PAN Card: {"original_name":"Cast certificate.pdf","filename":"Cast certificate_1756370353.pdf","size":686409,"file_path":"..\/uploads\/applications\/Cast certificate_1756370353.pdf","file_type":"application\/pdf","file_title":"PAN Card"}
+[2025-08-28 14:09:13] [INFO] [::1] Processing file for document: Aadhaar Card with title: Aadhaar Card
+[2025-08-28 14:09:13] [INFO] [::1] File details: {"name":"Result 12 th.pdf","full_path":"Result 12 th.pdf","type":"application\/pdf","tmp_name":"C:\\xampp\\tmp\\phpFDC5.tmp","error":0,"size":1322534}
+[2025-08-28 14:09:13] [INFO] [::1] Temporary upload directory: ../uploads/applications
+[2025-08-28 14:09:13] [INFO] [::1] Document name: Aadhaar Card
+[2025-08-28 14:09:13] [INFO] [::1] File uploaded successfully: {"original_name":"Result 12 th.pdf","filename":"Result 12 th_1756370353.pdf","size":1322534,"file_path":"..\/uploads\/applications\/Result 12 th_1756370353.pdf","file_type":"application\/pdf","file_title":"Aadhaar Card"}
+[2025-08-28 14:09:13] [INFO] [::1] File details inserted into database with ID: 180
+[2025-08-28 14:09:13] [INFO] [::1] Uploaded file for Aadhaar Card: {"original_name":"Result 12 th.pdf","filename":"Result 12 th_1756370353.pdf","size":1322534,"file_path":"..\/uploads\/applications\/Result 12 th_1756370353.pdf","file_type":"application\/pdf","file_title":"Aadhaar Card"}
+[2025-08-28 14:09:13] [INFO] [::1] Processing file for document: Business Address Proof with title: Business Address Proof
+[2025-08-28 14:09:13] [INFO] [::1] File details: {"name":"Samgra ID.pdf","full_path":"Samgra ID.pdf","type":"application\/pdf","tmp_name":"C:\\xampp\\tmp\\phpFDD6.tmp","error":0,"size":183962}
+[2025-08-28 14:09:13] [INFO] [::1] Temporary upload directory: ../uploads/applications
+[2025-08-28 14:09:13] [INFO] [::1] Document name: Business Address Proof
+[2025-08-28 14:09:13] [INFO] [::1] File uploaded successfully: {"original_name":"Samgra ID.pdf","filename":"Samgra ID_1756370353.pdf","size":183962,"file_path":"..\/uploads\/applications\/Samgra ID_1756370353.pdf","file_type":"application\/pdf","file_title":"Business Address Proof"}
+[2025-08-28 14:09:13] [INFO] [::1] File details inserted into database with ID: 181
+[2025-08-28 14:09:13] [INFO] [::1] Uploaded file for Business Address Proof: {"original_name":"Samgra ID.pdf","filename":"Samgra ID_1756370353.pdf","size":183962,"file_path":"..\/uploads\/applications\/Samgra ID_1756370353.pdf","file_type":"application\/pdf","file_title":"Business Address Proof"}
+[2025-08-28 14:09:13] [INFO] [::1] Processing file for document: Bank Account Details with title: Bank Account Details
+[2025-08-28 14:09:13] [INFO] [::1] File details: {"name":"Photo  (1).jpeg","full_path":"Photo  (1).jpeg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpFDD7.tmp","error":0,"size":169397}
+[2025-08-28 14:09:13] [INFO] [::1] Temporary upload directory: ../uploads/applications
+[2025-08-28 14:09:13] [INFO] [::1] Document name: Bank Account Details
+[2025-08-28 14:09:13] [INFO] [::1] File uploaded successfully: {"original_name":"Photo  (1).jpeg","filename":"Photo  (1)_1756370353.jpeg","size":169397,"file_path":"..\/uploads\/applications\/Photo  (1)_1756370353.jpeg","file_type":"image\/jpeg","file_title":"Bank Account Details"}
+[2025-08-28 14:09:13] [INFO] [::1] File details inserted into database with ID: 182
+[2025-08-28 14:09:13] [INFO] [::1] Uploaded file for Bank Account Details: {"original_name":"Photo  (1).jpeg","filename":"Photo  (1)_1756370353.jpeg","size":169397,"file_path":"..\/uploads\/applications\/Photo  (1)_1756370353.jpeg","file_type":"image\/jpeg","file_title":"Bank Account Details"}
+[2025-08-28 14:09:13] [INFO] [::1] Processing file for document: Photograph with title: Photograph
+[2025-08-28 14:09:13] [INFO] [::1] File details: {"name":"Photo  (2).jpeg","full_path":"Photo  (2).jpeg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\phpFDD8.tmp","error":0,"size":81335}
+[2025-08-28 14:09:13] [INFO] [::1] Temporary upload directory: ../uploads/applications
+[2025-08-28 14:09:13] [INFO] [::1] Document name: Photograph
+[2025-08-28 14:09:13] [INFO] [::1] File uploaded successfully: {"original_name":"Photo  (2).jpeg","filename":"Photo  (2)_1756370353.jpeg","size":81335,"file_path":"..\/uploads\/applications\/Photo  (2)_1756370353.jpeg","file_type":"image\/jpeg","file_title":"Photograph"}
+[2025-08-28 14:09:13] [INFO] [::1] File details inserted into database with ID: 183
+[2025-08-28 14:09:13] [INFO] [::1] Uploaded file for Photograph: {"original_name":"Photo  (2).jpeg","filename":"Photo  (2)_1756370353.jpeg","size":81335,"file_path":"..\/uploads\/applications\/Photo  (2)_1756370353.jpeg","file_type":"image\/jpeg","file_title":"Photograph"}
+[2025-08-28 14:09:13] [INFO] [::1] Successfully processed and stored uploaded files in session: {"PAN Card":{"original_name":"Cast certificate.pdf","filename":"Cast certificate_1756370353.pdf","size":686409,"file_path":"..\/uploads\/applications\/Cast certificate_1756370353.pdf","file_type":"application\/pdf","file_title":"PAN Card"},"Aadhaar Card":{"original_name":"Result 12 th.pdf","filename":"Result 12 th_1756370353.pdf","size":1322534,"file_path":"..\/uploads\/applications\/Result 12 th_1756370353.pdf","file_type":"application\/pdf","file_title":"Aadhaar Card"},"Business Address Proof":{"original_name":"Samgra ID.pdf","filename":"Samgra ID_1756370353.pdf","size":183962,"file_path":"..\/uploads\/applications\/Samgra ID_1756370353.pdf","file_type":"application\/pdf","file_title":"Business Address Proof"},"Bank Account Details":{"original_name":"Photo  (1).jpeg","filename":"Photo  (1)_1756370353.jpeg","size":169397,"file_path":"..\/uploads\/applications\/Photo  (1)_1756370353.jpeg","file_type":"image\/jpeg","file_title":"Bank Account Details"},"Photograph":{"original_name":"Photo  (2).jpeg","filename":"Photo  (2)_1756370353.jpeg","size":81335,"file_path":"..\/uploads\/applications\/Photo  (2)_1756370353.jpeg","file_type":"image\/jpeg","file_title":"Photograph"}}
+[2025-08-28 10:39:13] [INFO] [::1] Application initialized
+[2025-08-28 14:09:13] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 10:40:14] [INFO] [::1] Application initialized
+[2025-08-28 14:10:14] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 10:40:23] [INFO] [::1] Application initialized
+[2025-08-28 14:10:23] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:10:23] [INFO] [::1] Dashboard accessed
+[2025-08-28 14:10:23] [INFO] [::1] User ID: 39
+[2025-08-28 14:10:23] [INFO] [::1] Application statistics fetched: {"total_applications":1,"pending_applications":"1","approved_applications":"0","missing_document_applications":"0","rejected_applications":"0"}
+[2025-08-28 14:10:23] [INFO] [::1] Recent applications fetched: [{"id":50,"application_number":"000010","user_id":39,"service_type":"GST Registration","status":"pending","payment_status":"pending","reviewed_by":null,"reviewed_at":null,"created_at":"2025-08-28 14:09:13","updated_at":"2025-08-28 14:09:13","required_documents":null}]
+[2025-08-28 10:40:50] [INFO] [::1] Application initialized
+[2025-08-28 14:10:50] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:10:50] [INFO] [::1] Dashboard accessed
+[2025-08-28 14:10:50] [INFO] [::1] User ID: 39
+[2025-08-28 14:10:50] [INFO] [::1] Application statistics fetched: {"total_applications":1,"pending_applications":"0","approved_applications":"1","missing_document_applications":"0","rejected_applications":"0"}
+[2025-08-28 14:10:50] [INFO] [::1] Recent applications fetched: [{"id":50,"application_number":"000010","user_id":39,"service_type":"GST Registration","status":"approved","payment_status":"pending","reviewed_by":"Anjali Kushwah ","reviewed_at":"2025-08-28 14:10:46","created_at":"2025-08-28 14:09:13","updated_at":"2025-08-28 14:10:46","required_documents":null}]
+[2025-08-28 10:40:50] [INFO] [::1] Application initialized
+[2025-08-28 14:10:50] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:10:50] [INFO] [::1] Dashboard accessed
+[2025-08-28 14:10:50] [INFO] [::1] User ID: 39
+[2025-08-28 14:10:50] [INFO] [::1] Application statistics fetched: {"total_applications":1,"pending_applications":"0","approved_applications":"1","missing_document_applications":"0","rejected_applications":"0"}
+[2025-08-28 14:10:50] [INFO] [::1] Recent applications fetched: [{"id":50,"application_number":"000010","user_id":39,"service_type":"GST Registration","status":"approved","payment_status":"pending","reviewed_by":"Anjali Kushwah ","reviewed_at":"2025-08-28 14:10:46","created_at":"2025-08-28 14:09:13","updated_at":"2025-08-28 14:10:46","required_documents":null}]
+[2025-08-28 10:40:52] [INFO] [::1] Application initialized
+[2025-08-28 14:10:52] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:10:52] [INFO] [::1] this is application id: 
+[2025-08-28 14:10:52] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:41:09] [INFO] [::1] Application initialized
+[2025-08-28 14:11:09] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:11:09] [INFO] [::1] this is application id: 
+[2025-08-28 14:11:09] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:47:50] [INFO] [::1] Application initialized
+[2025-08-28 14:17:50] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:17:50] [INFO] [::1] this is application id: 
+[2025-08-28 14:17:50] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:48:28] [INFO] [::1] Application initialized
+[2025-08-28 14:18:28] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:18:28] [INFO] [::1] this is application id: 
+[2025-08-28 14:18:28] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:48:29] [INFO] [::1] Application initialized
+[2025-08-28 14:18:29] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:18:29] [INFO] [::1] this is application id: 
+[2025-08-28 14:18:29] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:48:29] [INFO] [::1] Application initialized
+[2025-08-28 14:18:29] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:18:29] [INFO] [::1] this is application id: 
+[2025-08-28 14:18:29] [INFO] [::1] Application details fetched: 
+[2025-08-28 10:48:29] [INFO] [::1] Application initialized
+[2025-08-28 14:18:29] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:18:29] [INFO] [::1] this is application id: 
+[2025-08-28 14:18:29] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:04:47] [INFO] [::1] Application initialized
+[2025-08-28 14:34:47] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:34:47] [INFO] [::1] this is application id: 
+[2025-08-28 14:34:47] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:04:48] [INFO] [::1] Application initialized
+[2025-08-28 14:34:48] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:34:48] [INFO] [::1] this is application id: 
+[2025-08-28 14:34:48] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:05:42] [INFO] [::1] Application initialized
+[2025-08-28 14:35:42] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:35:42] [INFO] [::1] this is application id: 
+[2025-08-28 14:35:42] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:08:57] [INFO] [::1] Application initialized
+[2025-08-28 14:38:58] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:38:58] [INFO] [::1] this is application id: 
+[2025-08-28 14:38:58] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:17:39] [INFO] [::1] Application initialized
+[2025-08-28 14:47:39] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:47:39] [INFO] [::1] this is application id: 
+[2025-08-28 14:47:39] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:24:43] [INFO] [::1] Application initialized
+[2025-08-28 14:54:43] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:54:43] [INFO] [::1] this is application id: 
+[2025-08-28 14:54:43] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:24:59] [INFO] [::1] Application initialized
+[2025-08-28 14:54:59] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:54:59] [INFO] [::1] this is application id: 
+[2025-08-28 14:54:59] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:25:01] [INFO] [::1] Application initialized
+[2025-08-28 14:55:01] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:55:01] [INFO] [::1] this is application id: 
+[2025-08-28 14:55:01] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:25:01] [INFO] [::1] Application initialized
+[2025-08-28 14:55:01] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:55:01] [INFO] [::1] this is application id: 
+[2025-08-28 14:55:01] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:25:01] [INFO] [::1] Application initialized
+[2025-08-28 14:55:01] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:55:01] [INFO] [::1] this is application id: 
+[2025-08-28 14:55:01] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:25:02] [INFO] [::1] Application initialized
+[2025-08-28 14:55:02] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:55:02] [INFO] [::1] this is application id: 
+[2025-08-28 14:55:02] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:25:13] [INFO] [::1] Application initialized
+[2025-08-28 14:55:13] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 14:55:13] [INFO] [::1] this is application id: 
+[2025-08-28 14:55:13] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:50:10] [INFO] [::1] Application initialized
+[2025-08-28 15:20:10] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 15:20:10] [INFO] [::1] this is application id: 
+[2025-08-28 15:20:10] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:50:33] [INFO] [::1] Application initialized
+[2025-08-28 15:20:33] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 15:20:33] [INFO] [::1] this is application id: 
+[2025-08-28 15:20:33] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:50:34] [INFO] [::1] Application initialized
+[2025-08-28 15:20:34] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 15:20:34] [INFO] [::1] this is application id: 
+[2025-08-28 15:20:34] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:50:34] [INFO] [::1] Application initialized
+[2025-08-28 15:20:34] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 15:20:34] [INFO] [::1] this is application id: 
+[2025-08-28 15:20:34] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:50:41] [INFO] [::1] Application initialized
+[2025-08-28 15:20:41] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 15:20:41] [INFO] [::1] this is application id: 
+[2025-08-28 15:20:41] [INFO] [::1] Application details fetched: 
+[2025-08-28 11:58:56] [INFO] [::1] Application initialized
+[2025-08-28 15:28:56] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 15:28:56] [INFO] [::1] this is application id: 
+[2025-08-28 15:28:57] [INFO] [::1] Application details fetched: 
+[2025-08-28 12:04:06] [INFO] [::1] Application initialized
+[2025-08-28 15:34:06] [INFO] [::1] base usr is in header: http://localhost/web_page/
+[2025-08-28 12:04:11] [INFO] [::1] Application initialized
+[2025-08-28 15:34:11] [INFO] [::1] base usr is in header: http://localhost/web_page/

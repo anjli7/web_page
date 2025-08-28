@@ -1,7 +1,5 @@
 <?php
 include '../include/header.php';
-// require_once '../php/db.php';
-// require_once '../php/config.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -99,7 +97,7 @@ try {
 
         <!-- Main Content -->
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="container">
+           
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h2>My Applications</h2>
                  
@@ -162,6 +160,7 @@ try {
                                             <th>Customer Name</th>
                                             <th>Service Type</th>
                                             <th>Submitted On</th>
+                                            <th>Payment Status</th>
                                             <th>Status</th>
                                             <th>Actions</th>
                                         </tr>
@@ -190,6 +189,7 @@ try {
                                                 </td>
                                                 <td><?php echo htmlspecialchars($app['service_type']); ?></td>
                                                 <td><?php echo date('M j, Y', strtotime($app['created_at'])); ?></td>
+                                                <td><?php echo htmlspecialchars($app['payment_status']); ?></td>
                                                 <td>
                                                     <span class="badge rounded-pill <?php echo $statusClass; ?>">
                                                         <?php echo ucwords(str_replace('_', ' ', $app['status'])); ?>
@@ -246,35 +246,36 @@ try {
                         <?php endif; ?>
                     </div>
                 </div>
-            </div>
+            
         </div>
-    </div>
-</div>
+   
+
 
 
 
 <!-- Delete Confirmation Modal -->
-<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-danger text-white">
-                <h5 class="modal-title"><i class="fas fa-exclamation-triangle me-2"></i>Confirm Deletion</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title"><i class="fas fa-exclamation-triangle me-2"></i>Confirm Deletion</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to delete this application? This action cannot be undone.</p>
+                            <p class="text-muted small">All associated documents will also be permanently deleted.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <a href="#" id="confirmDeleteBtn" class="btn btn-danger">
+                                <i class="fas fa-trash me-1"></i> Delete Application
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <p>Are you sure you want to delete this application? This action cannot be undone.</p>
-                <p class="text-muted small">All associated documents will also be permanently deleted.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <a href="#" id="confirmDeleteBtn" class="btn btn-danger">
-                    <i class="fas fa-trash me-1"></i> Delete Application
-                </a>
-            </div>
-        </div>
     </div>
 </div>
-
 <script>
 
 // Enhanced delete functionality with fallback
