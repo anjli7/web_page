@@ -1,5 +1,12 @@
 
-<?php include './include/header.php' ?>
+
+<?php include './include/header.php'; 
+
+$query = "SELECT * FROM articles ORDER BY created_at DESC LIMIT 3";
+$result = mysqli_query($conn, $query);
+
+?>
+
     <!-- hero-income-tax  -->
     <section class="hero-income-tax">
         <div class="hero-income-tax-overlay">
@@ -121,19 +128,30 @@
                 <div class="col-12">
                     <h2 class="fw-bold custom-heading custom-line mb-4">Latest Updates</h2>
                     <div class="row g-4">
+                    <?php while($row = mysqli_fetch_assoc($result)) { ?>
                         <div class="col-md-4">
                             <div class="card h-100">
-                                <img src="./assests/img/about.jpg" class="card-img-top" alt="ITR Extension">
+                                <!-- <img src="./assests/img/about.jpg" class="card-img-top" alt="ITR Extension"> -->
+                                <img src="./uploads/articles/<?php echo $row['image']; ?>" class="card-img-top" alt="<?php echo $row['title']; ?>">
                                 <div class="card-body">
-                                    <h5 class="card-title">ITR Filing Deadline Extended</h5>
-                                    <p class="card-text">The due date for filing Income Tax Returns for FY 2022-23 has been extended to December 31, 2023.</p>
-                                    <a href="#" class=" btn-sm custom-btn itd-btn">Read More</a>
+                                    <!-- <h5 class="card-title">ITR Filing Deadline Extended</h5> -->
+                                    <h5 class="card-title"><?php echo $row['title']; ?></h5>
+
+                                    <!-- <p class="card-text">The due date for filing Income Tax Returns for FY 2022-23 has been extended to December 31, 2023.</p> -->
+                                    <p class="card-text"><?php echo substr($row['description'], 0, 100) . '...'; ?></p>
+                                    <!-- <a href="#" class=" btn-sm custom-btn itd-btn">Read More</a> -->
+                                    <a href="<?php echo $row['link']; ?>" class="btn-sm custom-btn itd-btn">Read More</a>
                                 </div>
-                                <div class="card-footer bg-transparent">
+                                <!-- <div class="card-footer bg-transparent">
                                     <small class="text-muted">Posted on November 15, 2023</small>
+                                </div> -->
+                                <div class="card-footer bg-transparent">
+                                    <small class="text-muted">Posted on <?php echo date('F d, Y', strtotime($row['created_at'])); ?></small>
                                 </div>
                             </div>
                         </div>
+                    <?php } ?>
+
                         <div class="col-md-4">
                             <div class="card h-100">
                                 <img src="./assests/img/about.jpg" class="card-img-top" alt="Tax Simplification">
