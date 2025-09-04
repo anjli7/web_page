@@ -80,16 +80,31 @@ try {
 }
 ?>
 
-<div class="container mt-5">
-    <div class="card mx-auto" style="max-width: 500px;">
-        <div class="card-body">
-            <h5 class="card-title">Complete Payment</h5>
-            <p>Service: <?php echo htmlspecialchars($appData['application_type']); ?></p>
-            <p>Application No: <?php echo htmlspecialchars($appData['application_number']); ?></p>
-            <p>Amount: ₹<?php echo number_format($appData['amount']); ?></p>
-            <button id="rzp-button" class="btn btn-primary w-100">
-                Pay ₹<?php echo number_format($appData['amount']); ?>
+
+<div class="container payment-container">
+    <div class="card  payment-card">
+        <div class="card-header text-center text-white">
+            <h4 class="mb-0">Complete Your Payment</h4>
+        </div>
+        <div class="payment-body">
+            <div class="payment-detail">
+                <span>Service Type:</span>
+                <strong><?php echo htmlspecialchars($appData['application_type']); ?></strong>
+            </div>
+            <div class="payment-detail">
+                <span>Application No:</span>
+                <strong>#<?php echo htmlspecialchars($appData['application_number']); ?></strong>
+            </div>
+            <div class="payment-amount">
+                ₹<?php echo number_format($appData['amount'], 2); ?>
+                <div class="text-muted small mt-1">Total Amount Payable</div>
+            </div>
+            <button id="rzp-button" class="btn custom-btn btn-lg w-100  ">
+                <i class="fas fa-lock me-2 text-white"></i>Pay Now
             </button>
+            <p class="text-muted small mt-3 text-center">
+                <i class="fas fa-lock me-1"></i> Secure payment powered by Razorpay
+            </p>
         </div>
     </div>
 </div>
@@ -106,7 +121,7 @@ document.getElementById('rzp-button').onclick = function(e) {
         "order_id": "<?php echo $razorpayOrder['id']; ?>",
         "handler": function (response){
             // Redirect to a server-side handler to verify payment and update DB
-            window.location.href = "payment_handler.php?payment_id=" + response.razorpay_payment_id + "&order_id=<?php echo $newOrderNo; ?>";
+            window.location.href = "dashboard.php?payment_id=" + response.razorpay_payment_id + "&order_id=<?php echo $newOrderNo; ?>";
         },
         "prefill": {
             "name": "<?php echo htmlspecialchars($_SESSION['name']); ?>",

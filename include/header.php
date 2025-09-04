@@ -10,7 +10,9 @@ if (isset($_SESSION['user'])) {
 }
 global $baseURL;
 $baseURL = "http://" . $_SERVER['HTTP_HOST'] . "/web_page/";
+$fileURL = "http://" . $_SERVER['HTTP_HOST'] . "/uploads/"; 
 
+// http://localhost/uploads/
 
 
 require_once __DIR__ . '/../php/config.php';
@@ -20,12 +22,12 @@ global $logger, $browserLogger;
 $logger->info("base usr is in header: ". $baseURL);
 $imageSrc;
 
-if(isset($_SESSION["user_id"]) && isset($_SESSION["featured_image"])){
-    $imageSrc  = $baseURL . $_SESSION["featured_image"];
-}else{
-    $imageSrc = $baseURL . "uploads/profiles/user-avatar.png";
-}
 
+$imageSrc = isset($_SESSION['featured_image']) && !empty($_SESSION['featured_image'])
+    ? $fileURL . $_SESSION['featured_image']
+    : $fileURL . 'profiles/user-avatar.png';
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">

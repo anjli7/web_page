@@ -1,7 +1,6 @@
 
 
 <?php include './include/header.php'; 
-
 $query = "SELECT * FROM articles ORDER BY created_at DESC LIMIT 3";
 $result = mysqli_query($conn, $query);
 
@@ -124,63 +123,7 @@ $result = mysqli_query($conn, $query);
                 </div>
             </div>
 
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h2 class="fw-bold custom-heading custom-line mb-4">Latest Updates</h2>
-                    <div class="row g-4">
-                    <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <!-- <img src="./assests/img/about.jpg" class="card-img-top" alt="ITR Extension"> -->
-                                <img src="./uploads/articles/<?php echo $row['image']; ?>" class="card-img-top" alt="<?php echo $row['title']; ?>">
-                                <div class="card-body">
-                                    <!-- <h5 class="card-title">ITR Filing Deadline Extended</h5> -->
-                                    <h5 class="card-title"><?php echo $row['title']; ?></h5>
-
-                                    <!-- <p class="card-text">The due date for filing Income Tax Returns for FY 2022-23 has been extended to December 31, 2023.</p> -->
-                                    <p class="card-text"><?php echo substr($row['description'], 0, 100) . '...'; ?></p>
-                                    <!-- <a href="#" class=" btn-sm custom-btn itd-btn">Read More</a> -->
-                                    <a href="<?php echo $row['link']; ?>" class="btn-sm custom-btn itd-btn">Read More</a>
-                                </div>
-                                <!-- <div class="card-footer bg-transparent">
-                                    <small class="text-muted">Posted on November 15, 2023</small>
-                                </div> -->
-                                <div class="card-footer bg-transparent">
-                                    <small class="text-muted">Posted on <?php echo date('F d, Y', strtotime($row['created_at'])); ?></small>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
-
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <img src="./assests/img/about.jpg" class="card-img-top" alt="Tax Simplification">
-                                <div class="card-body">
-                                    <h5 class="card-title">New Tax Regime Simplified</h5>
-                                    <p class="card-text">Government announces simplified tax structure under new regime with reduced rates and no deductions.</p>
-                                    <a href="#" class="btn-sm custom-btn itd-btn">Read More</a>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <small class="text-muted">Posted on October 28, 2023</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <img src="./assests/img/about.jpg" .news-tickerclass="card-img-top" alt="Cyber Awareness">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cyber Security Awareness</h5>
-                                    <p class="card-text">Income Tax Department launches campaign to educate taxpayers about online fraud prevention.</p>
-                                    <a href="#" class="btn-sm custom-btn itd-btn">Read More</a>
-                                </div>
-                                <div class="card-footer bg-transparent">
-                                    <small class="text-muted">Posted on October 15, 2023</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
 
             <!-- 24-25 -->
               <div class="row">
@@ -263,54 +206,7 @@ $result = mysqli_query($conn, $query);
                     </div>
                 </div>
             </div>
-            <!-- 25-26 -->
-            <!-- <div class="row">
-                <div class="col-12" >
-                    <h2 class="fw-bold custom-heading custom-line mb-4">Tax Slabs for FY 2025-26</h2>
-                    <div class="table-responsive">
-                        <table class="table table-bordered tax-table">
-                            <thead>
-                                <tr>
-                                    <th>Income Range (₹)</th>
-                                    <th>Tax Rate (New Regime)</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Up to Rs. 4 lakh</td>
-                                    <td>Nil</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>Rs. 4 lakh - Rs. 8 lakh</td>
-                                    <td>5%</td>
-                                </tr>
-                                <tr>
-                                    <td>Rs. 8 lakh - Rs. 12 lakh</td>
-                                    <td>10%</td>
-                                </tr>
-                                <tr>
-                                    <td>Rs. 12 lakh - Rs. 16 lakh</td>
-                                    <td>15%</td>
-                                </tr>
-                                <tr>
-                                    <td>Rs. 16 lakh - Rs. 20 lakh</td>
-                                    <td>20%</td>
-                                </tr>
-                                <tr>
-                                    <td>Rs. 20 lakh - Rs. 24 lakh</td>
-                                    <td>25%</td>
-                                </tr>
-                                <tr>
-                                    <td>Above Rs. 24 lakh</td>
-                                    <td>30%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div> -->
+            
         </div>
     </main>
 

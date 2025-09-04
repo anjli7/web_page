@@ -1,10 +1,11 @@
 
-<?php 
-// session_start();
 
+<?php include './include/header.php';
 
+$query = "SELECT * FROM articles ORDER BY created_at DESC ";
+$result = mysqli_query($conn, $query);
 ?>
-        <?php include './include/header.php'; ?>
+
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -285,7 +286,7 @@
                         </div>
                         <h4>Tax Planning</h4>
                         <p>Strategic tax planning to minimize liabilities and maximize savings while ensuring full compliance.</p>
-                        <a href="#" class="btn btn-outline-color mt-auto w-100">Learn More</a>
+                        <a href="TDS.php" class="btn btn-outline-color mt-auto w-100">Learn More</a>
                     </div>
                 </div>
                 
@@ -296,7 +297,7 @@
                         </div>
                         <h4>Financial Advisory</h4>
                         <p>Expert guidance to help you make informed financial decisions for business growth.</p>
-                        <a href="#" class="btn btn-outline-color mt-auto w-100">Learn More</a>
+                        <a href="MCA.php" class="btn btn-outline-color mt-auto w-100">Learn More</a>
                     </div>
                 </div>
                 
@@ -318,7 +319,7 @@
                         </div>
                         <h4>Business Consulting</h4>
                         <p>Strategic consulting to optimize operations, reduce costs, and improve profitability.</p>
-                        <a href="#" class="btn btn-outline-color mt-auto w-100">Learn More</a>
+                        <a href="MCA.php" class="btn btn-outline-color mt-auto w-100">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -351,7 +352,7 @@
 
 
    <!------------- feetback------ -->
-   <section class="container">
+<section class="container">
     <div class="testimonial-header">
         <h2 class="middle-line">Customer Testimonials</h2>
         <p>See what our clients have to say about their experience with our tax filing services</p>
@@ -402,6 +403,31 @@
         <div class="dot" data-index="1"></div>
     </div>
     </section> 
+
+    <section class="container" >
+      <div class="row mb-5">
+              <div class="col-12">
+                    <h2 class="fw-bold custom-heading custom-line mb-4">Latest Updates</h2>
+                  <div class="row g-4">
+                    <?php while($row = mysqli_fetch_assoc($result)) { ?>
+                        <div class="col-md-4">
+                            <div class="card blog-card h-100">
+                                <img src="<?php echo $fileURL . $row['image']; ?>" class="card-img-top  blog-card-img" alt="<?php echo $row['title']; ?>">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $row['title']; ?></h5>
+                                    <p class="card-text"><?php echo substr($row['description'], 0, 100) . '...'; ?></p>
+                                    <a href="blog_post.php?id=<?php echo $row['id']; ?>" class="btn-sm custom-btn itd-btn">Read More</a>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <small class="text-muted">Posted on <?php echo date('F d, Y', strtotime($row['created_at'])); ?></small>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                  </div>
+              </div>
+      </div>
+  </section>
 
 
 
@@ -470,6 +496,7 @@
         </div>
     </section>
     
+
 
       <!------ form ------>
    

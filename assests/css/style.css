@@ -590,6 +590,24 @@ body {
   background-color: #f8f9fa;
   padding: 45px 0px;
 }
+
+.blog-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+  background: #fff;
+}
+.blog-card-img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  object-position: center;
+  border-bottom: 1px solid #eee;
+  display: block;
+}
+
+
 /* --------content-form-----------  */
 .contact-section {
   background-color: var(--light-color);
@@ -2161,140 +2179,37 @@ left: 0;
 .auth-form-container .auth-form-box.auth-form-active {
   display: block;
 }
+/* payment handler  */
 
-/* Forgot Password Page - Matching Login Style */
-/* Forgot Password Page - Matching Login Style
-
-.forgot-password-container {
-  max-width: 500px;
+.payment-container {
+  max-width: 600px;
   margin: 2rem auto;
-  padding: 0 1rem;
-} */
-
-/* Replaced .forgot-password-card with .card.shadow-sm styling */
-/* .forgot-password-container .card.shadow-sm {
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   padding: 2rem;
 }
-
-.forgot-password-title {
-  color: var(--heading-color);
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-weight: 500;
-}
-
-
-.forgot-password-form .form-control {
-  padding: 0.8rem 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  font-size: 1rem;
-}
-
-.forgot-password-form .form-control:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.25rem rgba(10, 25, 69, 0.1);
-  outline: none;
-}
-
-.forgot-password-btn {
-  background-color: var(--secondary-color);
-  color: white;
+.payment-card {
   border: none;
-  padding: 0.8rem;
-  width: 100%;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  font-size: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.forgot-password-btn:hover {
-  background-color: var(--primary-color);
+.payment-body {
+  padding: 2rem;
 }
-
-.otp-form {
-  margin-top: 2rem;
-  animation: fadeIn 0.5s ease;
+.payment-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.payment-detail:last-child {
+  border-bottom: none;
 }
-
-.back-to-login {
+.payment-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
   text-align: center;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
 
-.back-to-login a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-
-
-.error-message {
-  color: var(--accent-color);
-  font-size: 0.9rem;
-  margin-top: -1rem;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.success-message {
-  color: var(--success);
-  background-color: rgba(46, 204, 113, 0.1);
-  padding: 0.75rem;
-  border-radius: 5px;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  border: 1px solid rgba(46, 204, 113, 0.3);
-}
-
-/* Responsive adjustments */
-@media (max-width: 576px) {
-  .forgot-password-container {
-      padding: 0 0.5rem;
-  }
-  
-  .forgot-password-container .card.shadow-sm {
-      padding: 1.5rem;
-  }
-  
-  .forgot-password-title {
-      font-size: 1.5rem;
-  }
-} 
-
-/* --------------change_password---------------- */
-
-/* .password-strength {
-  height: 4px;
-  margin-top: 5px;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-.strength-weak { background-color: #dc3545; }
-.strength-medium { background-color: #ffc107; }
-.strength-strong { background-color: #198754; }
-.match-indicator {
-  font-size: 0.875rem;
-  margin-top: 5px;
-}
-.match-success { color: #198754; }
-.match-error { color: #dc3545; }
-.card .card-header {
-  background-color: var(--primary-color) !important;
-  border: none;
-  color: white;
-}  */
- 

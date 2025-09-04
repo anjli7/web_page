@@ -3,7 +3,8 @@ ob_start();
 
 include '../include/header.php';
 require_once '../php/db.php';
-require_once '../php/config.php';
+global $logger;
+
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -18,7 +19,7 @@ $message = $_SESSION['message'] ?? '';
 $error   = $_SESSION['error'] ?? '';
 unset($_SESSION['message'], $_SESSION['error']);
 
-// ✅ Always fetch latest user data from DB
+
 $userQuery = $conn->prepare("SELECT name, email, mobile, featured_image FROM users WHERE id = ?");
 $userQuery->bind_param("i", $user_id);
 $userQuery->execute();
@@ -45,10 +46,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
     }
 
     $file_uploaded = isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] !== UPLOAD_ERR_NO_FILE;
+    
     $new_image_path = null;
 
     if ($file_uploaded && !$hasError) {
         $file = $_FILES['profile_picture'];
+        
         $allowed_types = ['image/jpeg' => 'jpg', 'image/jpg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp'];
         $file_type = $file['type'];
         $max_file_size = 5 * 1024 * 1024;
@@ -71,13 +74,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
 
             // Handle file upload
             if ($file_uploaded) {
-                $upload_dir = '../uploads/profiles/';
-                if (!file_exists($upload_dir)) {
+                $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/profiles/';
+                
+                if (!is_dir($upload_dir)) {
                     mkdir($upload_dir, 0777, true);
                 }
 
+                
+
                 $file_name = uniqid() . '.' . $allowed_types[$file_type];
-                $file_path_for_db = 'uploads/profiles/' . $file_name;
+                $file_path_for_db = 'profiles/' . $file_name;
                 $full_file_path = $upload_dir . $file_name;
 
                 if (move_uploaded_file($file['tmp_name'], $full_file_path)) {
@@ -126,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
 
             $conn->commit();
 
-            // ✅ Update session values
+            // Update session values
             $_SESSION['name']  = $name;
             $_SESSION['email'] = $email;
             $_SESSION['mobile'] = $mobile; // important fix
@@ -149,7 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
     }
 }
 
-$imageSrc = $_SESSION['featured_image'] ? $baseURL . $_SESSION['featured_image'] : $baseURL . 'uploads/profiles/user-avatar.png';
+$imageSrc = !empty($_SESSION['featured_image'])
+    ? $fileURL . $_SESSION['featured_image']
+    : $fileURL . "profiles/user-avatar.png";
 ?>
 
 <div class="container-fluid">
